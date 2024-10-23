@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "cclr-fed-main": {
+    "ccrl-fed-main": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/cclr-fed-main",
+            "outputPath": "dist/ccrl-fed-main",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -37,6 +37,11 @@
             "prerender": true,
             "ssr": {
               "entry": "server.ts"
+            },
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/assets/scss/"
+              ]
             }
           },
           "configurations": {
@@ -67,10 +72,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "cclr-fed-main:build:production"
+              "buildTarget": "ccrl-fed-main:build:production"
             },
             "development": {
-              "buildTarget": "cclr-fed-main:build:development"
+              "buildTarget": "ccrl-fed-main:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -78,7 +83,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "cclr-fed-main:build"
+            "buildTarget": "ccrl-fed-main:build"
           }
         },
         "test": {
