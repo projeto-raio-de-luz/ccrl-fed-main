@@ -1,3 +1,3 @@
 export enum PathEnum {
-  TELA_PRINCIPAL = "Página Inicial"
+    TELA_PRINCIPAL = 'Página Inicial',
 }
