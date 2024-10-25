@@ -5,7 +5,7 @@ import { PublicRoutingModule } from './public-routing.module';
 import { PublicComponent } from './public.component';
 
 @NgModule({
-    declarations: [PaginaInicialComponent, PublicComponent],
-    imports: [SharedModule, PublicRoutingModule],
+  declarations: [PaginaInicialComponent, PublicComponent],
+  imports: [SharedModule, PublicRoutingModule],
 })
 export class PublicModule {}
