@@ -1,8 +1,10 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container d-flex justify-content-between">
-    <a class="navbar-brand" href="#">Navbar</a>
+    <a class="navbar-brand" [href]="logo.path">
+      <img [src]="logo.url" class="logo d-inline-block align-top" alt="">
+    </a>
     <div class="navbar-nav">
-      <a class="nav-item nav-link active" href="#">Home</a>
+      <a class="nav-item nav-link active" *ngFor="let item of menu " [href]="item.path">{{item.titulo}}</a>
     </div>
   </div>
 </nav>
