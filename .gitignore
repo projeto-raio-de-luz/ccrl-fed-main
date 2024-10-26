@@ -22,11 +22,11 @@ package-lock.json
 *.sublime-workspace
 
 # Visual Studio Code
-.vscode/*
+/.vscode
 .history/*
 
 # Miscellaneous
-/.angular/cache
+/.angular
 .sass-cache/
 /connect.lock
 /coverage

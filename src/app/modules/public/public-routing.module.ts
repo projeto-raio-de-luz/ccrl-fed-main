@@ -1,11 +1,14 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { PublicComponent } from './public.component';
+import path from 'path';
 import { PaginaInicialComponent } from './pagina-inicial/pagina-inicial.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: PaginaInicialComponent,
+    component: PublicComponent,
+    children: [{ path: '', component: PaginaInicialComponent }],
   },
 ];
 
