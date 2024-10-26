@@ -1,3 +1,31 @@
-.logo{
-  height: 30px;
+@import 'shared';
+
+.logo {
+  height: 40px;
+}
+
+.nav {
+  &-link {
+    font-weight: 600;
+    &:hover {
+      color: $primary !important;
+    }
+  }
+}
+
+.navbar-toggler {
+  transition: border 0.3s ease, color 0.3s ease;
+
+  &:hover {
+    border: 1px solid $primary;
+
+    .icon {
+      color: $primary;
+    }
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
 }

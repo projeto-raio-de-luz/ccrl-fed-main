@@ -1,5 +1,4 @@
 export interface MenuModel {
   path: string;
-  titulo: string;
+  title: string;
 }
-

@@ -20,5 +20,5 @@ export class OrganizationDetailModel {
   phone: string = '';
   email: string = '';
   about: AboutModel = new AboutModel();
-  address: AddressModel  = new AddressModel();
+  address: AddressModel = new AddressModel();
 }

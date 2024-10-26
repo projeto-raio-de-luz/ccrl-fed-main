@@ -8,12 +8,12 @@ enum PathEnum {
 }
 
 const menu: MenuModel[] = [
-  { path: PathEnum.PRINCIPAL, titulo: 'Principal' },
-  { path: PathEnum.SOBRE, titulo: 'Sobre' },
-  { path: PathEnum.PROJETOS, titulo: 'Projetos' },
-  { path: PathEnum.TRANSPARENCIA, titulo: 'Transparência' },
+  { path: PathEnum.PRINCIPAL, title: 'Principal' },
+  { path: PathEnum.SOBRE, title: 'Sobre' },
+  { path: PathEnum.PROJETOS, title: 'Projetos' },
+  { path: PathEnum.TRANSPARENCIA, title: 'Transparência' },
 ];
 
-export function getMenu(): MenuModel[]{
+export function getMenu(): MenuModel[] {
   return menu;
-};
+}
