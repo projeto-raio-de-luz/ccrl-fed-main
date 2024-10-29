@@ -1,44 +1,28 @@
 @import 'shared';
 
+// .text-white{
+//   color: red !important;
+// }
 .navbar {
   &-brand {
     .logo {
-      height: 72px;
+      height: 42px;
     }
   }
 
   &-nav {
-    .nav-link {
-      position: relative;
+    .nav-item{
 
+    }
+    .nav-link {
       &:hover {
         color: $primary !important;
-
-        &::before {
-          position: absolute;
-          content: '';
-          left: 0;
-          bottom: 0;
-          height: 2px;
-          width: 100%;
-          background: $primary;
-        }
       }
     }
   }
 
   &-toggler {
-    transition:
-      border 0.3s ease,
-      color 0.3s ease;
-
-    &:hover {
-      border: 1px solid $primary;
-
-      .icon {
-        color: $primary;
-      }
-    }
+    border: none;
 
     &:focus {
       outline: none;
