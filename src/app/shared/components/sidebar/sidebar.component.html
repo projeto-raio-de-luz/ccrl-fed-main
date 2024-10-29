@@ -1,0 +1,33 @@
+<div
+  class="offcanvas offcanvas-end navbar-expand-sm"
+  [ngClass]="{ show: open }"
+  tabindex="-1"
+  id="offcanvasNavbar"
+  aria-labelledby="offcanvasNavbarLabel"
+>
+  <div class="offcanvas-header ">
+    <div class="navbar-brand">
+      <a [href]="logo.path">
+        <img [src]="logo.url" class="d-inline-block align-top logo" alt="" />
+      </a>
+    </div>
+    <button
+      type="button"
+      class="btn-close"
+      data-bs-dismiss="offcanvas"
+      aria-label="Close"
+      (click)="close()"
+    ></button>
+  </div>
+  <hr class="divider">
+  <div class="offcanvas-body">
+    <ul class="navbar-nav justify-content-end flex-column flex-grow-1 pe-3">
+      <li class="nav-item" *ngFor="let item of menu">
+        <a class="nav-link" [href]="item.path">
+          {{ item.title }}
+        </a>
+      </li>
+    </ul>
+  </div>
+  <hr class="divider">
+</div>

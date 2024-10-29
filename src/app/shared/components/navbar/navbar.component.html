@@ -1,12 +1,18 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+<!-- <nav class="navbar navbar-expand-lg" [ngClass]="homeClasses()">
   <div class="container">
     <a class="navbar-brand" [href]="logo.path">
-      <img [src]="logo.url" class="logo d-inline-block align-top" alt="" />
+      <img [src]="logo.url" class="d-inline-block align-top logo" alt="" />
     </a>
     <div class="navbar-nav d-none d-lg-flex">
-      <a class="nav-item nav-link" *ngFor="let item of menu" [href]="item.path">
-        {{ item.title }}
-      </a>
+
+        <a
+          class="nav-item nav-link"
+          [ngClass]="{ 'text-white': isHome }"
+          *ngFor="let item of menu"
+          [href]="item.path"
+        >
+          {{ item.title }}
+        </a>
     </div>
     <button
       class="navbar-toggler"
@@ -24,8 +30,12 @@
 
 <div class="collapse shadow-sm d-lg-none" id="navbarToggleExternalContent">
   <div class="navbar-nav pt-4 pb-4">
-    <a class="nav-item nav-link text-center" *ngFor="let item of menu" [href]="item.path">
+    <a
+      class="nav-item nav-link text-center"
+      *ngFor="let item of menu"
+      [href]="item.path"
+    >
       {{ item.title }}
     </a>
   </div>
-</div>
+</div> -->

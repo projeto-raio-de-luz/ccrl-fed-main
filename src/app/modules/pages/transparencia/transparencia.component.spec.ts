@@ -1,17 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PaginaInicialComponent } from './pagina-inicial.component';
+import { TransparenciaComponent } from './transparencia.component';
 
-describe('PaginaInicialComponent', () => {
-  let component: PaginaInicialComponent,
-    fixture: ComponentFixture<PaginaInicialComponent>;
+describe('TransparenciaComponent', () => {
+  let component: TransparenciaComponent;
+  let fixture: ComponentFixture<TransparenciaComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [PaginaInicialComponent],
+      imports: [TransparenciaComponent],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(PaginaInicialComponent);
+    fixture = TestBed.createComponent(TransparenciaComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

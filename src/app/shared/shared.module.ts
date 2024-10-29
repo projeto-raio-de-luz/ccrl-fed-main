@@ -6,6 +6,6 @@ import { ComponentsModule } from './components/components.module';
 @NgModule({
   declarations: [],
   imports: [CommonModule, RouterModule, RouterOutlet, ComponentsModule],
-  exports: [ComponentsModule],
+  exports: [CommonModule, ComponentsModule],
 })
 export class SharedModule {}

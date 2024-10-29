@@ -1,31 +1,48 @@
 @import 'shared';
 
-.logo {
-  height: 40px;
-}
+.navbar {
+  &-brand {
+    .logo {
+      height: 72px;
+    }
+  }
 
-.nav {
-  &-link {
-    font-weight: 600;
+  &-nav {
+    .nav-link {
+      position: relative;
+
+      &:hover {
+        color: $primary !important;
+
+        &::before {
+          position: absolute;
+          content: '';
+          left: 0;
+          bottom: 0;
+          height: 2px;
+          width: 100%;
+          background: $primary;
+        }
+      }
+    }
+  }
+
+  &-toggler {
+    transition:
+      border 0.3s ease,
+      color 0.3s ease;
+
     &:hover {
-      color: $primary !important;
+      border: 1px solid $primary;
+
+      .icon {
+        color: $primary;
+      }
     }
-  }
-}
 
-.navbar-toggler {
-  transition: border 0.3s ease, color 0.3s ease;
-
-  &:hover {
-    border: 1px solid $primary;
-
-    .icon {
-      color: $primary;
+    &:focus {
+      outline: none;
+      box-shadow: none;
     }
-  }
-
-  &:focus {
-    outline: none;
-    box-shadow: none;
   }
 }

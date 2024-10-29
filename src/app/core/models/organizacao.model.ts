@@ -1,6 +1,6 @@
 import { AboutModel } from './about';
 import { AddressModel } from './address';
-import { LogoModel } from './file.model';
+import { FileModel, LogoModel } from './file.model';
 
 export class OrganizationModel {
   id: string = '';
@@ -19,6 +19,8 @@ export class OrganizationDetailModel {
   facebook: string = '';
   phone: string = '';
   email: string = '';
+  homeBanners: FileModel[] = [];
+  pageBanners: FileModel[] = [];
   about: AboutModel = new AboutModel();
   address: AddressModel = new AddressModel();
 }

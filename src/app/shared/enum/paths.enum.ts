@@ -1,6 +1,6 @@
 import { MenuModel } from '../../core/models/menu.model';
 
-enum PathEnum {
+export enum PathEnum {
   PRINCIPAL = '',
   SOBRE = 'sobre',
   PROJETOS = 'projetos',
