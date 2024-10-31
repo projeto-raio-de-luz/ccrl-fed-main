@@ -1,11 +1,11 @@
-<section id="hero">
+<section id="hero" class="mb-5">
   <div class="container-fluid p-0 carousel-fade">
     <div
       id="carouselExampleIndicators"
       class="carousel slide"
       data-bs-ride="carousel"
     >
-      <div class="carousel-indicators mb-5">
+      <div class="carousel-indicators mt-5 mb-5">
         <button
           *ngFor="let banner of organization.homeBanners; let i = index"
           type="button"
@@ -37,6 +37,26 @@
             Nossa História
           </button>
         </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="posts" class="mt-5 mb-5">
+  <div class="container">
+    <h4 class="text-center mb-4">Publicações Recentes</h4>
+
+    <div class="row gap-3">
+      <div
+        class="col d-flex justify-content-center"
+        *ngFor="let item of dataInsta.data"
+      >
+        <ccrl-card-post
+          [url]="isVideo(item.media_type) ? item.thumbnail_url : item.media_url"
+          [permalink]="item.permalink"
+          [description]="item.caption"
+          [date]="item.timestamp"
+        ></ccrl-card-post>
       </div>
     </div>
   </div>

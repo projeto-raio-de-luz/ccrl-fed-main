@@ -3,7 +3,7 @@ import { MenuModel } from '../../../core/models/menu.model';
 import { LogoModel } from '../../../core/models/file.model';
 
 @Component({
-  selector: 'sidebar',
+  selector: 'ccrl-sidebar',
   templateUrl: './sidebar.component.html',
   styleUrl: './sidebar.component.scss',
 })
