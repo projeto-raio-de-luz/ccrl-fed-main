@@ -50,7 +50,7 @@ export class HomeComponent implements OnInit {
           '• Consciência e sustentabilidade para todas as gerações! ✨\n\nNo Centro Cultural Raio de Luz, a palestra sobre o descarte consciente de eletrônicos foi especialmente direcionada aos idosos do projeto “Reciclar como Direito, 2030 vem aí”. \n\nEsse encontro reforçou a importância do reaproveitamento e da responsabilidade ambiental, mostrando que, com conhecimento e pequenas atitudes, é possível construir um futuro mais sustentável. \n\nJuntos, estamos plantando as sementes de um amanhã mais verde e consciente! 💚',
         like_count: 14,
         id: '18467813806017155',
-      }
+      },
     ],
     paging: {
       cursors: {

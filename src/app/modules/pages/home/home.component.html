@@ -1,10 +1,6 @@
 <section id="hero" class="mb-5">
   <div class="container-fluid p-0 carousel-fade">
-    <div
-      id="carouselExampleIndicators"
-      class="carousel slide"
-      data-bs-ride="carousel"
-    >
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-indicators mt-5 mb-5">
         <button
           *ngFor="let banner of organization.homeBanners; let i = index"
@@ -18,24 +14,22 @@
       </div>
 
       <div class="carousel-inner">
-        <ng-container *ngIf="organization.homeBanners.length > 0">
-          <div
-            *ngFor="let banner of organization.homeBanners; let i = index"
-            class="carousel-item"
-            [class.active]="i === 0"
-          >
-            <img class="d-block w-100" [src]="banner.url" alt="Banner image" />
-          </div>
-        </ng-container>
+        <div
+          *ngFor="let banner of organization.homeBanners; let i = index"
+          class="carousel-item"
+          [class.active]="i === 0"
+        >
+          <img class="d-block w-100 img-fluid" [src]="banner.url" alt="Banner image" />
+        </div>
       </div>
 
       <div class="caption text-center start-50 translate-middle z-2">
         <div class="container">
           <h1>{{ organization.about.heroTitle }}</h1>
-          <p class="text-white-50">{{ organization.about.heroText }}</p>
-          <button type="button" class="btn btn-outline-primary">
-            Nossa História
-          </button>
+          <p class="text-white-50">
+            {{ organization.about.heroText }}
+          </p>
+          <button type="button" class="btn btn-outline-primary">Nossa História</button>
         </div>
       </div>
     </div>
@@ -44,13 +38,12 @@
 
 <section id="posts" class="mt-5 mb-5">
   <div class="container">
-    <h4 class="text-center mb-4">Publicações Recentes</h4>
+    <h4 class="text-center mb-4">
+      {{ 'home.publicacoes' | translate }}
+    </h4>
 
     <div class="row gap-3">
-      <div
-        class="col d-flex justify-content-center"
-        *ngFor="let item of dataInsta.data"
-      >
+      <div class="col d-flex justify-content-center" *ngFor="let item of dataInsta.data">
         <ccrl-card-post
           [url]="isVideo(item.media_type) ? item.thumbnail_url : item.media_url"
           [permalink]="item.permalink"

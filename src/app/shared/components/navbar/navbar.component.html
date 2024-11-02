@@ -7,11 +7,7 @@
     </div>
 
     <div class="navbar-nav d-none d-lg-flex">
-      <a
-        class="nav-item nav-link"
-        *ngFor="let item of menu"
-        [href]="item.path"
-      >
+      <a class="nav-item nav-link" *ngFor="let item of menu" [href]="item.path">
         {{ item.title }}
       </a>
     </div>

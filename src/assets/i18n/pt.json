@@ -1,0 +1,19 @@
+{
+  "home": {
+    "publicacoes": "Publicações Recentes"
+  },
+  "sobre": {
+    "titulo": "Quem somos?",
+    "principios": "Princípios que guiam nossa jornada",
+    "fuincionarios": "Nossa diretoria",
+    "documentos": "Documentos",
+    "culturalGroup": "Grupos culturais"
+  },
+  "projetos": {
+    "titulo": "Projetos"
+  },
+  "footer": {
+    "menu": "Menu",
+    "contatos": "Contatos"
+  }
+}

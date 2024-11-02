@@ -7,9 +7,7 @@ export const routes: Routes = [
       {
         path: '',
         loadChildren: () =>
-          import('./modules/pages/pages.module').then(
-            (module) => module.PagesModule
-          ),
+          import('./modules/pages/pages.module').then((module) => module.PagesModule),
       },
     ],
   },

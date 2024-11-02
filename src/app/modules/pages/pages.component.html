@@ -1,2 +1,9 @@
-<ccrl-navbar [logo]="organization.logoSecondary" [isHome]="isHome()"></ccrl-navbar>
-<router-outlet />
+<ccrl-navbar [logo]="organization.logoSecondary" [isHome]="isHome()" />
+
+<div class="d-flex flex-column mh-100">
+  <div class="flex-grow-1">
+    <router-outlet />
+  </div>
+
+  <ccrl-footer [organization]="organization" />
+</div>

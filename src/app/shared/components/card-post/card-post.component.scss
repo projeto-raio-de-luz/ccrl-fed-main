@@ -35,3 +35,18 @@
     }
   }
 }
+
+.hover-effect {
+  img {
+    transition: filter 0.3s ease;
+    filter: grayscale(80%);
+    opacity: 0.5;
+  }
+
+  &:hover {
+    img {
+      filter: none !important;
+      opacity: 1;
+    }
+  }
+}

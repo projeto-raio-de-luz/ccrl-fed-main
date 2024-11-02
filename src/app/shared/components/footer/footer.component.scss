@@ -1,0 +1,36 @@
+@import 'shared';
+
+#footer {
+  background-color: $bg-2;
+
+  .col {
+    width: 300px;
+  }
+
+  .flex-wrap {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .logo {
+    img {
+      width: 200px;
+      object-fit: cover;
+    }
+  }
+
+  span,
+  a {
+    font-size: 14px;
+  }
+
+  a:hover,
+  .social-media:hover {
+    transition: 0.2s all linear;
+    color: $primary !important;
+  }
+
+  .copyright {
+    background-color: darken($bg-2, 5%);
+  }
+}

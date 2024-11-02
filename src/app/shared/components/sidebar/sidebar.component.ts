@@ -12,7 +12,7 @@ export class SidebarComponent {
   @Input() menu: MenuModel[] = [];
   @Input() open = false;
 
-  close(){
+  close() {
     this.open = false;
   }
 }

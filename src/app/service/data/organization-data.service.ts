@@ -6,9 +6,9 @@ import { OrganizationDetailModel } from '../../core/models/organizacao.model';
   providedIn: 'root',
 })
 export class OrganizationDataService {
-  private organizationDataSubject = new BehaviorSubject<
-    OrganizationDetailModel | undefined
-  >(undefined);
+  private organizationDataSubject = new BehaviorSubject<OrganizationDetailModel | undefined>(
+    undefined
+  );
 
   data$: Observable<OrganizationDetailModel | undefined> =
     this.organizationDataSubject.asObservable();

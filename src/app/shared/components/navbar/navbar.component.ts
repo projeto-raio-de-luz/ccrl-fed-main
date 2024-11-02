@@ -7,12 +7,12 @@ import { OrganizationDetailModel } from '../../../core/models/organizacao.model'
 @Component({
   selector: 'ccrl-navbar',
   templateUrl: './navbar.component.html',
-  styleUrl: './navbar.component.scss'
+  styleUrl: './navbar.component.scss',
 })
 export class NavbarComponent {
-  menu: MenuModel[] = getMenu();
   @Input() isHome: boolean = false;
   @Input() logo: LogoModel = new LogoModel();
+  menu: MenuModel[] = getMenu();
   sidebar: boolean = false;
 
   abrirSidebar() {
