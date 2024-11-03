@@ -1,0 +1,18 @@
+@import 'shared';
+
+#hero {
+  .carousel-item {
+    img {
+      height: 400px;
+      object-fit: cover;
+    }
+  }
+}
+
+#about {
+  .principles {
+    // border-left: 4px solid $primary;
+
+
+  }
+}

@@ -4,7 +4,12 @@
   },
   "sobre": {
     "titulo": "Quem somos?",
-    "principios": "Princípios que guiam nossa jornada",
+    "principios": {
+      "titulo":  "Princípios",
+      "missao": "Missão",
+      "valores": "Valores",
+      "visao": "Visão"
+    },
     "fuincionarios": "Nossa diretoria",
     "documentos": "Documentos",
     "culturalGroup": "Grupos culturais"

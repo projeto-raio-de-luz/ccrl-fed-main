@@ -10,9 +10,7 @@ import { OrganizationDataService } from '../../../service/data/organization-data
   styleUrl: './home.component.scss',
 })
 export class HomeComponent implements OnInit {
-  pathEnum = PathEnum;
   organization: OrganizationDetailModel = new OrganizationDetailModel();
-  routes: MenuModel[] = [];
 
   dataInsta = {
     data: [
