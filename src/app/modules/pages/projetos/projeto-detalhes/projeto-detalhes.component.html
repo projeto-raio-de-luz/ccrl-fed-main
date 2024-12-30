@@ -1,0 +1,35 @@
+<ccrl-hero [title]="project.name"></ccrl-hero>
+
+<div class="container">
+  <section>
+    <div class="text-justify" [innerHTML]="project.description | safeHtml"></div>
+  </section>
+
+  <section class="p-4" *ngIf="project.images.length > 0">
+    <app-galeria [images]="project.images"></app-galeria>
+  </section>
+
+  <section id="documents" class="pt-4 pb-4">
+    <button data-bs-toggle="modal" data-bs-target="#openModal">
+      <i class="fa-solid fa-folder"></i>
+      <span class="ms-2 text-decoration-none">{{ 'sobre.anexos.titulo' | translate }}</span>
+    </button>
+
+    <ccrl-modal>
+      <div modal-title>{{ 'sobre.anexos.titulo' | translate }}</div>
+      <div modal-content>
+        <div class="d-flex flex-column gap-2">
+          <a
+            *ngFor="let item of documents"
+            [href]="item.url"
+            target="_blank"
+            class="text-decoration-none primary"
+          >
+            <i class="fa-solid fa-cloud-arrow-down"></i>
+            <span class="ms-2 link-dark">{{ item.title }}</span>
+          </a>
+        </div>
+      </div>
+    </ccrl-modal>
+  </section>
+</div>

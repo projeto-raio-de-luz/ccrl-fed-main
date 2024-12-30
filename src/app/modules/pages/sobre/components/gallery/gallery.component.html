@@ -1,0 +1,14 @@
+<div class="carousel carousel-fade" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div
+      *ngFor="let item of images; let i = index"
+      class="carousel-item d-flex justify-content-center my-3"
+      [class.active]="i === 0"
+    >
+      <img [src]="item.url" />
+    </div>
+
+    <div class="box box-top"></div>
+    <div class="box box-bottom"></div>
+  </div>
+</div>

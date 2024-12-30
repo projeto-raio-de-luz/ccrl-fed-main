@@ -1,0 +1,31 @@
+@import 'shared';
+
+.carousel {
+  &-inner {
+    position: relative;
+    .box {
+      width: 32px;
+      height: 60%;
+      background-color: $primary;
+
+      &-top {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      &-bottom {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+      }
+    }
+  }
+
+  img {
+    width: 97%;
+    height: 500px;
+
+    object-fit: cover;
+    z-index: 999;
+  }
+}

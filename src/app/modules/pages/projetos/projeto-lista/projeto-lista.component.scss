@@ -1,0 +1,30 @@
+@import "shared";
+
+#projetos {
+  height: 100%;
+
+  .project {
+    &__list {
+      justify-content: space-around;
+    }
+
+    &__item {
+      width: 300px;
+      // height: 350px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 0;
+      font-size: 14px;
+
+
+      a{
+        background-color: $primary;
+        font-size: 14px;
+      }
+      span{
+        opacity: 0.5;
+      }
+    }
+  }
+}

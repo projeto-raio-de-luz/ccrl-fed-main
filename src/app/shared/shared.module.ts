@@ -25,7 +25,7 @@ export function HttpLoaderFactory(http: HttpClient) {
         deps: [HttpClient],
       },
     }),
-    SafeHtmlPipe
+    SafeHtmlPipe,
   ],
   exports: [CommonModule, ComponentsModule, TranslateModule, SafeHtmlPipe],
 })

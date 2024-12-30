@@ -1,25 +1,23 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
-import { OrganizationDetailModel } from '../../core/models/organizacao.model';
+import { OrganizationDetail } from '../../core/models/organizacao.model';
+import { Employee } from '../../core/models/employee';
 
 @Injectable({
   providedIn: 'root',
 })
 export class OrganizationDataService {
-  private organizationDataSubject = new BehaviorSubject<OrganizationDetailModel | undefined>(
-    undefined
-  );
+  private organizationDataSubject = new BehaviorSubject<OrganizationDetail | undefined>(undefined);
 
-  data$: Observable<OrganizationDetailModel | undefined> =
-    this.organizationDataSubject.asObservable();
+  data$: Observable<OrganizationDetail | undefined> = this.organizationDataSubject.asObservable();
 
   constructor() {}
 
-  setData(data: OrganizationDetailModel) {
+  setData(data: OrganizationDetail) {
     this.organizationDataSubject.next(data);
   }
 
-  getData(): OrganizationDetailModel | undefined {
+  getData(): OrganizationDetail | undefined {
     return this.organizationDataSubject.getValue();
   }
 }

@@ -1,11 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { PathEnum } from '@shared/enum/paths.enum';
-import { ProjetosComponent } from './projetos/projetos.component';
-import { SobreComponent } from './sobre/sobre.component';
-import { TransparenciaComponent } from './transparencia/transparencia.component';
 import { HomeComponent } from './home/home.component';
 import { PagesComponent } from './pages.component';
+import { ProjetoDetalhesComponent } from './projetos/projeto-detalhes/projeto-detalhes.component';
+import { ProjetoListaComponent } from './projetos/projeto-lista/projeto-lista.component';
+import { ProjetoComponent } from './projetos/projeto.component';
+import { SobreComponent } from './sobre/sobre.component';
 
 const routes: Routes = [
   {
@@ -22,12 +23,22 @@ const routes: Routes = [
       },
       {
         path: PathEnum.PROJETOS,
-        component: ProjetosComponent,
+        component: ProjetoComponent,
+        children: [
+          {
+            path: '',
+            component: ProjetoListaComponent,
+          },
+          {
+            path: ':id',
+            component: ProjetoDetalhesComponent,
+          },
+        ],
       },
-      {
-        path: PathEnum.TRANSPARENCIA,
-        component: TransparenciaComponent,
-      },
+      // {
+      //   path: PathEnum.TRANSPARENCIA,
+      //   component: TransparenciaComponent,
+      // },
     ],
   },
 ];

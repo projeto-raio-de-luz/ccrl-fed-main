@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import { OrganizationDetailModel } from '../../core/models/organizacao.model';
+import { Router } from '@angular/router';
+import { OrganizationDetail } from '../../core/models/organizacao.model';
 import { OrganizationDataService } from '../../service/data/organization-data.service';
 import { OrganizationService } from '../../service/organization.service';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-pages',
@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
   styleUrl: './pages.component.scss',
 })
 export class PagesComponent {
-  organization: OrganizationDetailModel = new OrganizationDetailModel();
+  organization: OrganizationDetail = new OrganizationDetail();
 
   constructor(
     private organizationService: OrganizationService,
@@ -21,8 +21,9 @@ export class PagesComponent {
   ngOnInit(): void {
     this.carregarDados();
   }
+
   carregarDados() {
-    this.organizationService.obterDetalhes().subscribe({
+    this.organizationService.getDetails().subscribe({
       next: (response) => {
         this.organization = response;
         this.organizationDataService.setData(response);

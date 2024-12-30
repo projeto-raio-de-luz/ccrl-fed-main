@@ -1,48 +1,74 @@
-<section id="hero" class="mb-5">
-  <div class="container-fluid p-0 carousel-fade placeholder-glow">
-    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-inner">
-        <div
-          *ngFor="let banner of organization.pageBanners; let i = index"
-          class="carousel-item"
-          [class.active]="i === 0"
-        >
-          <img class="d-block w-100 img-fluid" [src]="banner.url" alt="Banner image" />
+<ccrl-hero title="{{ 'sobre.titulo' | translate }}"></ccrl-hero>
+
+<div class="container">
+  <section id="about" class="pt-4 pb-4">
+    <ccrl-gallery [images]="organization.pageBanners" />
+
+    <div class="text-justify mt-3">
+      <p [innerHTML]="organization.about.description | safeHtml"></p>
+    </div>
+  </section>
+
+  <section id="principle" class="pt-4 pb-4">
+    <h4 class="fw-bold text-center mb-4">{{ 'sobre.principios.titulo' | translate }}</h4>
+
+    <div id="principle__list">
+      <div id="principle__item" class="p-0 mx-2" *ngFor="let item of principles">
+        <div class="icon d-flex justify-content-center">
+          <img [src]="'/assets/icons/' + item.title + '.svg'" alt="icon" />
+        </div>
+
+        <h5 class="title fw-bold text-center">
+          {{ 'sobre.principios.' + item.title | translate }}
+        </h5>
+
+        <div class="text-center">
+          <p [innerHTML]="item.description | safeHtml"></p>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="about" class="mb-5">
-  <div class="container">
-    <div>
-      <h2 class="fw-bold text-center mb-4">{{ 'sobre.titulo' | translate }}</h2>
+  <section class="pt-4 pb-4">
+    <h4 class="fw-bold text-center mb-4">{{ 'sobre.diretoria' | translate }}</h4>
 
-      <div class="text-justify" [innerHTML]="organization.about.description | safeHtml"></div>
+    <ccrl-employee [employees]="employees" />
+  </section>
 
-      <div>
+  <section id="cultural-group" class="pt-4 pb-4">
+    <h4 class="fw-bold text-center mb-4">{{ 'sobre.gruposCulturais' | translate }}</h4>
 
+    <div class="cultural-group__list" *ngFor="let item of culturalGroups; let i = index">
+      <h5 class="fw-bold">{{ item.name }}</h5>
+
+      <div class="cultural-group__item my-2 gap-3">
+        <img [src]="item.images" alt="imagem" />
+        <p>{{ item.description }}</p>
       </div>
     </div>
+  </section>
 
-    <div class="principles">
-      <h4 class="fw-bold text-center">{{ 'sobre.principios.titulo' | translate }}</h4>
+  <section id="documents" class="pt-4 pb-4">
+    <button data-bs-toggle="modal" data-bs-target="#openModal">
+      <i class="fa-solid fa-folder"></i>
+      <span class="ms-2 text-decoration-none">{{ 'sobre.anexos.titulo' | translate }}</span>
+    </button>
 
-      <div>
-        <h5 class="fw-bold">{{ 'sobre.principios.missao' | translate }}</h5>
-        <div class="text-justify" [innerHTML]="organization.about.mission | safeHtml"></div>
-
-        <h5 class="fw-bold">{{ 'sobre.principios.valores' | translate }}</h5>
-        <div class="text-justify" [innerHTML]="organization.about.values | safeHtml"></div>
-
-        <h5 class="fw-bold">{{ 'sobre.principios.visao' | translate }}</h5>
-        <div class="text-justify" [innerHTML]="organization.about.vision | safeHtml"></div>
+    <ccrl-modal>
+      <div modal-title>{{ 'sobre.anexos.titulo' | translate }}</div>
+      <div modal-content>
+        <div class="d-flex flex-column gap-2">
+          <a
+            *ngFor="let item of documents"
+            [href]="item.url"
+            target="_blank"
+            class="text-decoration-none primary"
+          >
+            <i class="fa-solid fa-cloud-arrow-down"></i>
+            <span class="ms-2 link-dark">{{ item.title }}</span>
+          </a>
+        </div>
       </div>
-    </div>
-  </div>
-</section>
-
-<section>
-  
-</section>
+    </ccrl-modal>
+  </section>
+</div>

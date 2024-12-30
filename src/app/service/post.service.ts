@@ -1,19 +1,19 @@
-import { Injectable } from '@angular/core';
-import { environment } from '../../environments/environment';
 import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { PostModel } from '../core/models/post';
+import { environment } from '../../environments/environment';
+import { Post } from '../core/models/post';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PostService {
   private baseUrl = environment.api;
-  private url = this.baseUrl + '/v1/instagram/posts';
+  private url = this.baseUrl + '/v1/instagram';
 
   constructor(private http: HttpClient) {}
 
-  obterPosts(): Observable<PostModel[]> {
-    return this.http.get<PostModel[]>(this.url);
+  obterPosts(): Observable<Post[]> {
+    return this.http.get<Post[]>(`${this.url}/posts`);
   }
 }

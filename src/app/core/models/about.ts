@@ -1,4 +1,4 @@
-export class AboutModel {
+export class About {
   description: string = '';
   mission: string = '';
   values: string = '';

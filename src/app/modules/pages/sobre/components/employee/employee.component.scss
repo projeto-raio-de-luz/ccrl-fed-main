@@ -1,0 +1,27 @@
+.employee {
+  &__card {
+    width: 150px;
+  }
+
+  &__profile {
+    img {
+      height: 100px;
+      width: 100px;
+      object-fit: cover;
+    }
+  }
+
+  &__description {
+    display: flex;
+    flex-direction: column;
+
+    span:nth-child(1) {
+      font-size: 14px;
+    }
+
+    span:nth-child(2) {
+      font-size: 12px;
+      opacity: 0.5;
+    }
+  }
+}

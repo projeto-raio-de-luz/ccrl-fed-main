@@ -8,6 +8,4 @@ import { Component, Input } from '@angular/core';
 export class CardPostComponent {
   @Input() url: string | undefined = '';
   @Input() permalink: string = '';
-  @Input() description: string = '';
-  @Input() date: string = '';
 }

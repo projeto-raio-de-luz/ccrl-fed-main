@@ -1,0 +1,16 @@
+@import "shared";
+
+#documents {
+  button {
+    color: $primary;
+    border: none;
+    background: none;
+
+    &:hover {
+      span,
+      .fa-folder {
+        color: darken($primary, 10%);
+      }
+    }
+  }
+}

@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
-import { OrganizationDetailModel } from '../../../core/models/organizacao.model';
-import { MenuModel } from '../../../core/models/menu.model';
+import { OrganizationDetail } from '../../../core/models/organizacao.model';
+import { Menu } from '../../../core/models/menu.model';
 import { getMenu } from '@shared/enum/paths.enum';
 
 @Component({
@@ -9,6 +9,6 @@ import { getMenu } from '@shared/enum/paths.enum';
   styleUrl: './footer.component.scss',
 })
 export class FooterComponent {
-  @Input() organization: OrganizationDetailModel = new OrganizationDetailModel();
-  menu: MenuModel[] = getMenu();
+  @Input() organization: OrganizationDetail = new OrganizationDetail();
+  menu: Menu[] = getMenu();
 }

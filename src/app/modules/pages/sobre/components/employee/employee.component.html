@@ -1,0 +1,11 @@
+<div id="employee" class="d-flex flex-wrap justify-content-center gap-4" *ngIf="employees">
+  <div class="employee__card text-center" *ngFor="let employee of employees">
+    <div class="employee__profile">
+      <img [src]="employee.profile.url" alt="" />
+    </div>
+    <div class="employee__description">
+      <span>{{ employee.displayName }}</span>
+      <span>{{ employee.role }}</span>
+    </div>
+  </div>
+</div>

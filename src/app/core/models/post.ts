@@ -1,7 +1,7 @@
-export class PostModel {
+export class Post {
   id: string = '';
   mediaType: string = '';
   mediaUrl: string = '';
   permaLink: string = '';
-  timestamp: string = '';;
+  thumbnailUrl: string | undefined = '';
 }

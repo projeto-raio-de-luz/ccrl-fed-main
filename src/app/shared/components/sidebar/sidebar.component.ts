@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
-import { MenuModel } from '../../../core/models/menu.model';
-import { LogoModel } from '../../../core/models/file.model';
+import { Menu } from '../../../core/models/menu.model';
+import { Logo } from '../../../core/models/file.model';
 
 @Component({
   selector: 'ccrl-sidebar',
@@ -8,8 +8,8 @@ import { LogoModel } from '../../../core/models/file.model';
   styleUrl: './sidebar.component.scss',
 })
 export class SidebarComponent {
-  @Input() logo: LogoModel = new LogoModel();
-  @Input() menu: MenuModel[] = [];
+  @Input() logo: Logo = new Logo();
+  @Input() menu: Menu[] = [];
   @Input() open = false;
 
   close() {

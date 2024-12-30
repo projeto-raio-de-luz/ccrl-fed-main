@@ -5,14 +5,16 @@
   "sobre": {
     "titulo": "Quem somos?",
     "principios": {
-      "titulo":  "Princípios",
+      "titulo": "Princípios",
       "missao": "Missão",
       "valores": "Valores",
       "visao": "Visão"
     },
-    "fuincionarios": "Nossa diretoria",
-    "documentos": "Documentos",
-    "culturalGroup": "Grupos culturais"
+    "diretoria": "Diretoria",
+    "gruposCulturais": "Grupos Culturais",
+    "anexos": {
+      "titulo": "Anexos"
+    }
   },
   "projetos": {
     "titulo": "Projetos"
@@ -20,5 +22,8 @@
   "footer": {
     "menu": "Menu",
     "contatos": "Contatos"
+  },
+  "modal": {
+    "fechar": "Fechar"
   }
 }

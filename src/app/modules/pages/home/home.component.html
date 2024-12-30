@@ -29,7 +29,7 @@
           <p class="text-white-50">
             {{ organization.about.heroText }}
           </p>
-          <button type="button" class="btn btn-outline-primary">Nossa História</button>
+          <a routerLink="/sobre" type="button" class="btn btn-outline-primary">Nossa História</a>
         </div>
       </div>
     </div>
@@ -43,12 +43,10 @@
     </h4>
 
     <div class="row gap-3">
-      <div class="col d-flex justify-content-center" *ngFor="let item of dataInsta.data">
+      <div class="col d-flex justify-content-center" *ngFor="let item of dataInsta">
         <ccrl-card-post
-          [url]="isVideo(item.media_type) ? item.thumbnail_url : item.media_url"
-          [permalink]="item.permalink"
-          [description]="item.caption"
-          [date]="item.timestamp"
+          [url]="isVideo(item.mediaType) ? item.thumbnailUrl : item.mediaUrl"
+          [permalink]="item.permaLink"
         ></ccrl-card-post>
       </div>
     </div>
