@@ -6,6 +6,7 @@ export interface Project {
   name: string;
   startDate: string;
   endDate: string;
+  images: File[];
 }
 
 export class ProjectDetail {

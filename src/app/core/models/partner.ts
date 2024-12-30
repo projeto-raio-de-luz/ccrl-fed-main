@@ -1,6 +1,6 @@
 import { Logo } from './file.model';
 
-export interface IPartner {
+export interface Partner {
   partnerId: string;
   name: string;
   logo: Logo;

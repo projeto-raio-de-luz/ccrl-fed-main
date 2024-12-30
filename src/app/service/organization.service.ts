@@ -7,6 +7,7 @@ import { Employee } from '../core/models/employee';
 import { Document } from '../core/models/file.model';
 import { CulturalGroup } from '../core/models/cultural-group.model';
 import { Project, ProjectDetail } from '../core/models/project';
+import { Partner } from '../core/models/partner';
 
 @Injectable({
   providedIn: 'root',
@@ -22,9 +23,10 @@ export class OrganizationService {
     return this.http.get<OrganizationDetail>(`${this.url}/active`);
   }
 
-  getPartner(organizationId: string): Observable<Employee[]> {
-    return this.http.get<Employee[]>(`${this.url}/${organizationId}/partner`);
+  getPartner(organizationId: string): Observable<Partner[]> {
+    return this.http.get<Partner[]>(`${this.url}/${organizationId}/partner`);
   }
+
   getEmployees(organizationId: string): Observable<Employee[]> {
     return this.http.get<Employee[]>(`${this.url}/${organizationId}/employees`);
   }
@@ -47,5 +49,8 @@ export class OrganizationService {
 
   getProjectDocument(projectId: string): Observable<Document[]> {
     return this.http.get<Document[]>(`${this.urlProject}/projects/${projectId}/documents`);
+  }
+  getProjectPartners(projectId: string): Observable<Partner[]>{
+    return this.http.get<Partner[]>(`${this.urlProject}/projects/${projectId}/partners`);
   }
 }

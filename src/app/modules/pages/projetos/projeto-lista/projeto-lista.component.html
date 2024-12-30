@@ -4,12 +4,8 @@
   <section>
     <div class="d-flex">
       <div class="project__list row">
-        <div class="project__item m-2 shadow" *ngFor="let project of projects">
-          <img
-            src="https://mdbcdn.b-cdn.net/img/new/standard/city/041.webp"
-            class="card-img-top"
-            alt="Hollywood Sign on The Hill"
-          />
+        <div class="project__item m-2 shadow" *ngFor="let project of projects" >
+          <img *ngIf="project.images" [src]="project.images[0].url" class="card-img-top" />
 
           <h5 class="mt-2 px-2 text-center">{{ project.name }}</h5>
           <span class="px-2 py-2 text-center">

@@ -47,4 +47,13 @@ export class ProjetoDetalhesComponent implements OnInit {
       error: (error) => console.error(error),
     });
   }
+
+  // getPartners(projectId: string) {
+  //   this.organizationService.getPartner(projectId).subscribe({
+  //     next: (response) => {
+  //       this.documents = response;
+  //     },
+  //     error: (error) => console.error(error),
+  //   });
+  // }
 }

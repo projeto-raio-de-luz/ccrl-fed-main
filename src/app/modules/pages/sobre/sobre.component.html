@@ -29,26 +29,26 @@
     </div>
   </section>
 
-  <section class="pt-4 pb-4">
+  <section class="pt-4 pb-4" *ngIf="employees.length > 0">
     <h4 class="fw-bold text-center mb-4">{{ 'sobre.diretoria' | translate }}</h4>
 
     <ccrl-employee [employees]="employees" />
   </section>
 
-  <section id="cultural-group" class="pt-4 pb-4">
+  <section id="cultural-group" class="pt-4 pb-4" *ngIf="culturalGroups.length > 0">
     <h4 class="fw-bold text-center mb-4">{{ 'sobre.gruposCulturais' | translate }}</h4>
 
     <div class="cultural-group__list" *ngFor="let item of culturalGroups; let i = index">
       <h5 class="fw-bold">{{ item.name }}</h5>
 
       <div class="cultural-group__item my-2 gap-3">
-        <img [src]="item.images" alt="imagem" />
+        <img [src]="item.images[0].url" alt="imagem" />
         <p>{{ item.description }}</p>
       </div>
     </div>
   </section>
 
-  <section id="documents" class="pt-4 pb-4">
+  <section id="documents" class="pt-4 pb-4" *ngIf="documents.length > 0">
     <button data-bs-toggle="modal" data-bs-target="#openModal">
       <i class="fa-solid fa-folder"></i>
       <span class="ms-2 text-decoration-none">{{ 'sobre.anexos.titulo' | translate }}</span>
