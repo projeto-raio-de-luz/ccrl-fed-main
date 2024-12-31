@@ -4,6 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng build -c=production && ng serve -c=production",
+    "start:prd": "node server.js -c=production",
     "start:local": "ng serve",
     "build": "ng build -c=production",
     "watch": "ng build --watch --configuration development",
