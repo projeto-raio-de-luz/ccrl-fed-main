@@ -10,7 +10,6 @@
     "build": "ng build -c=production",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:ccrl-fed-main": "node dist/ccrl-fed-main/server/server.mjs",
     "format": "prettier --write \"src/**/*.{js,ts,scss,json,html}\"",
     "format:check": "prettier --check \"src/**/*.{js,ts,scss,json,html}\""
   },
