@@ -54,4 +54,6 @@ function run(): void {
   });
 }
 
+export const runtime = 'nodejs'
+
 run();
