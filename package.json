@@ -3,7 +3,9 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng build -c=production && ng serve -c=production",
+    "dev": "ng serve",
+    "start": "node dist/my-app/server/server.mjs",
+    "startProd": "ng build -c=production && ng serve -c=production",
     "start:local": "ng serve",
     "build": "ng build -c=production",
     "watch": "ng build --watch --configuration development",
