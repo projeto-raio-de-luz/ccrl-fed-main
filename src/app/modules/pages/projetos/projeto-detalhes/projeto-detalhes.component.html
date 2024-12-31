@@ -9,7 +9,7 @@
     <app-galeria [images]="project.images"></app-galeria>
   </section>
 
-  <section id="documents" class="pt-4 pb-4">
+  <section id="documents" class="pt-4 pb-4" *ngIf="documents.length > 0 ">
     <button data-bs-toggle="modal" data-bs-target="#openModal">
       <i class="fa-solid fa-folder"></i>
       <span class="ms-2 text-decoration-none">{{ 'sobre.anexos.titulo' | translate }}</span>
