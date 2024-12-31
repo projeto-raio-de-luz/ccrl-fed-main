@@ -35,10 +35,6 @@ const routes: Routes = [
           },
         ],
       },
-      // {
-      //   path: PathEnum.TRANSPARENCIA,
-      //   component: TransparenciaComponent,
-      // },
     ],
   },
 ];
