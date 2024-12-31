@@ -46,7 +46,7 @@
       <div class="col d-flex justify-content-center" *ngFor="let item of dataInsta">
         <ccrl-card-post
           [url]="isVideo(item.mediaType) ? item.thumbnailUrl : item.mediaUrl"
-          [permalink]="item.permaLink"
+          [permalink]="item.permalink"
         ></ccrl-card-post>
       </div>
     </div>
