@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from '../../environments/environment';
@@ -8,6 +8,12 @@ import { Document } from '../core/models/file.model';
 import { CulturalGroup } from '../core/models/cultural-group.model';
 import { Project, ProjectDetail } from '../core/models/project';
 import { Partner } from '../core/models/partner';
+
+const options =({
+  headers: new HttpHeaders({
+    'Cache-Control': 'no-cache'
+  })
+})
 
 @Injectable({
   providedIn: 'root',
@@ -20,37 +26,37 @@ export class OrganizationService {
   constructor(private http: HttpClient) {}
 
   getDetails(): Observable<OrganizationDetail> {
-    return this.http.get<OrganizationDetail>(`${this.url}/active`);
+    return this.http.get<OrganizationDetail>(`${this.url}/active`, options);
   }
 
   getPartner(organizationId: string): Observable<Partner[]> {
-    return this.http.get<Partner[]>(`${this.url}/${organizationId}/partner`);
+    return this.http.get<Partner[]>(`${this.url}/${organizationId}/partner`, options);
   }
 
   getEmployees(organizationId: string): Observable<Employee[]> {
-    return this.http.get<Employee[]>(`${this.url}/${organizationId}/employees`);
+    return this.http.get<Employee[]>(`${this.url}/${organizationId}/employees`, options);
   }
 
   getDocuments(organizationId: string): Observable<Document[]> {
-    return this.http.get<Document[]>(`${this.url}/${organizationId}/files?type=DOCUMENT`);
+    return this.http.get<Document[]>(`${this.url}/${organizationId}/files?type=DOCUMENT`, options);
   }
 
   getCulturalGroup(organizationId: string): Observable<CulturalGroup[]> {
-    return this.http.get<CulturalGroup[]>(`${this.url}/${organizationId}/cultural-groups`);
+    return this.http.get<CulturalGroup[]>(`${this.url}/${organizationId}/cultural-groups`, options);
   }
 
   getProjects(organizationId: string): Observable<Project[]> {
-    return this.http.get<Project[]>(`${this.url}/${organizationId}/projects`);
+    return this.http.get<Project[]>(`${this.url}/${organizationId}/projects`, options);
   }
 
   getProject(organizationId: string, projectId: string): Observable<ProjectDetail> {
-    return this.http.get<ProjectDetail>(`${this.url}/${organizationId}/projects/${projectId}`);
+    return this.http.get<ProjectDetail>(`${this.url}/${organizationId}/projects/${projectId}`, options);
   }
 
   getProjectDocument(projectId: string): Observable<Document[]> {
-    return this.http.get<Document[]>(`${this.urlProject}/projects/${projectId}/documents`);
+    return this.http.get<Document[]>(`${this.urlProject}/projects/${projectId}/documents`, options);
   }
   getProjectPartners(projectId: string): Observable<Partner[]>{
-    return this.http.get<Partner[]>(`${this.urlProject}/projects/${projectId}/partners`);
+    return this.http.get<Partner[]>(`${this.urlProject}/projects/${projectId}/partners`, options);
   }
 }
