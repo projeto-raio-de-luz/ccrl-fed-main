@@ -22,10 +22,10 @@ export class HomeComponent implements OnInit {
     const data = this.organizationDataService.getData();
     if (data) this.organization = data;
 
-    this.postService.obterPosts().subscribe({
-      next: (response) => {
+    this.postService.obterPosts().then((response) => {
+      // next: (response) => {
         this.dataInsta = response;
-      },
+      // },
     });
   }
 

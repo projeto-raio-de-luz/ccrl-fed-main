@@ -3,5 +3,5 @@ export class Post {
   mediaType: string = '';
   mediaUrl: string = '';
   permalink: string = '';
-  thumbnailUrl: string | undefined = '';
+  thumbnailUrl: string = '';
 }

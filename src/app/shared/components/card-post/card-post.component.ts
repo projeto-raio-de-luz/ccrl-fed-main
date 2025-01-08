@@ -6,6 +6,10 @@ import { Component, Input } from '@angular/core';
   styleUrl: './card-post.component.scss',
 })
 export class CardPostComponent {
-  @Input() url: string | undefined = '';
+  @Input() url: string = '';
   @Input() permalink: string = '';
+
+  // setImg(value: string): string {
+  //   return `${value}?time=${Date.now()}`;
+  // }
 }
