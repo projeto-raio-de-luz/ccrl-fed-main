@@ -25,6 +25,7 @@ export class HomeComponent implements OnInit {
     this.postService.obterPosts().then((response) => {
       // next: (response) => {
         this.dataInsta = response;
+        console.log(response)
       // },
     });
   }
