@@ -11,7 +11,8 @@ import { Partner } from '../core/models/partner';
 
 const options =({
   headers: new HttpHeaders({
-    'Cache-Control': 'no-cache'
+    'Cache-Control': 'no-cache',
+    'Pragma': 'no-cache'
   })
 })
 

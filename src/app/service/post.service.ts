@@ -6,7 +6,8 @@ import { Post } from '../core/models/post';
 
 const options =({
   headers: new HttpHeaders({
-    'Cache-Control': 'no-cache'
+    'Cache-Control': 'no-cache',
+    'Pragma': 'no-cache'
   })
 })
 
