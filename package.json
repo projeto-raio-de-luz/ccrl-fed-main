@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "dev": "ng serve",
-    "start": "node dist/ccrl-fed-main/server/server.mjs",
+    "start": "node dist/ccrl-fed-main/server/server.mjs --output-hashing=all",
     "start:local": "ng serve",
     "build": "ng build -c=production",
     "watch": "ng build --watch --configuration development",

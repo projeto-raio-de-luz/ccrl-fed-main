@@ -25,6 +25,6 @@ export class PostService {
 
   obterPosts(): Promise<Post[]> {
     const options = {}; // Caso você precise de headers ou outros parâmetros
-    return firstValueFrom(this.http.get<Post[]>(`${this.url}/posts`, options));
+    return firstValueFrom(this.http.get<Post[]>(`${this.url}/posts`));
   }
 }

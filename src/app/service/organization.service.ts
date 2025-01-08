@@ -27,37 +27,37 @@ export class OrganizationService {
   constructor(private http: HttpClient) {}
 
   getDetails(): Observable<OrganizationDetail> {
-    return this.http.get<OrganizationDetail>(`${this.url}/active`, options);
+    return this.http.get<OrganizationDetail>(`${this.url}/active`);
   }
 
   getPartner(organizationId: string): Observable<Partner[]> {
-    return this.http.get<Partner[]>(`${this.url}/${organizationId}/partner`, options);
+    return this.http.get<Partner[]>(`${this.url}/${organizationId}/partner`);
   }
 
   getEmployees(organizationId: string): Observable<Employee[]> {
-    return this.http.get<Employee[]>(`${this.url}/${organizationId}/employees`, options);
+    return this.http.get<Employee[]>(`${this.url}/${organizationId}/employees`);
   }
 
   getDocuments(organizationId: string): Observable<Document[]> {
-    return this.http.get<Document[]>(`${this.url}/${organizationId}/files?type=DOCUMENT`, options);
+    return this.http.get<Document[]>(`${this.url}/${organizationId}/files?type=DOCUMENT`);
   }
 
   getCulturalGroup(organizationId: string): Observable<CulturalGroup[]> {
-    return this.http.get<CulturalGroup[]>(`${this.url}/${organizationId}/cultural-groups`, options);
+    return this.http.get<CulturalGroup[]>(`${this.url}/${organizationId}/cultural-groups`);
   }
 
   getProjects(organizationId: string): Observable<Project[]> {
-    return this.http.get<Project[]>(`${this.url}/${organizationId}/projects`, options);
+    return this.http.get<Project[]>(`${this.url}/${organizationId}/projects`);
   }
 
   getProject(organizationId: string, projectId: string): Observable<ProjectDetail> {
-    return this.http.get<ProjectDetail>(`${this.url}/${organizationId}/projects/${projectId}`, options);
+    return this.http.get<ProjectDetail>(`${this.url}/${organizationId}/projects/${projectId}`);
   }
 
   getProjectDocument(projectId: string): Observable<Document[]> {
-    return this.http.get<Document[]>(`${this.urlProject}/projects/${projectId}/documents`, options);
+    return this.http.get<Document[]>(`${this.urlProject}/projects/${projectId}/documents`);
   }
   getProjectPartners(projectId: string): Observable<Partner[]>{
-    return this.http.get<Partner[]>(`${this.urlProject}/projects/${projectId}/partners`, options);
+    return this.http.get<Partner[]>(`${this.urlProject}/projects/${projectId}/partners`);
   }
 }
