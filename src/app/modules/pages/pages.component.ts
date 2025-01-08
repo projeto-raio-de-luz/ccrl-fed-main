@@ -1,10 +1,10 @@
-import { isPlatformBrowser } from '@angular/common';
-import { Component, Inject, PLATFORM_ID, Renderer2 } from '@angular/core';
-import { Title } from '@angular/platform-browser';
+import { Component, Inject, PLATFORM_ID, Renderer2, signal } from '@angular/core';
 import { Router } from '@angular/router';
 import { OrganizationDetail } from '../../core/models/organizacao.model';
 import { OrganizationDataService } from '../../service/data/organization-data.service';
 import { OrganizationService } from '../../service/organization.service';
+import { Title } from '@angular/platform-browser';
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-pages',
@@ -34,6 +34,7 @@ export class PagesComponent {
     this.organizationService.getDetails().subscribe({
       next: (response) => {
         this.organization = response;
+        this.organizationDataService.setData(response)
       },
     });
   }
