@@ -26,8 +26,8 @@ export class PostService {
         'Cache-Control': 'no-cache',
       }
     }; // Caso você precise de headers ou outros parâmetros
-    
-    const timestamp = new Date().getTime();
-    return firstValueFrom(this.http.get<Post[]>(`${this.url}/posts?_=${timestamp}`, options));
+
+    // const timestamp = new Date().getTime();
+    return firstValueFrom(this.http.get<Post[]>(`${this.url}/posts`, options));
   }
 }
