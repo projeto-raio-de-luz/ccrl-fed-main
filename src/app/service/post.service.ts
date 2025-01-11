@@ -24,6 +24,7 @@ export class PostService {
     const options = {
       headers: {
         'Cache-Control': 'no-cache',
+        'Pragma': "no-cache"
       }
     }; // Caso você precise de headers ou outros parâmetros
 
