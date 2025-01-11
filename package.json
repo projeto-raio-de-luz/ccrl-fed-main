@@ -4,13 +4,13 @@
   "scripts": {
     "ng": "ng",
     "dev": "ng serve",
-    "start": "node dist/ccrl-fed-main/server/server.mjs --output-hashing=all",
-    "start:local": "ng serve",
+    "start": "ng serve",
     "build": "ng build -c=production",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "format": "prettier --write \"src/**/*.{js,ts,scss,json,html}\"",
-    "format:check": "prettier --check \"src/**/*.{js,ts,scss,json,html}\""
+    "format:check": "prettier --check \"src/**/*.{js,ts,scss,json,html}\"",
+    "serve:ssr:ccrl-fed-main": "node dist/ccrl-fed-blog/server/server.mjs"
   },
   "private": true,
   "dependencies": {
