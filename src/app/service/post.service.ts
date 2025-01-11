@@ -20,14 +20,7 @@ export class PostService {
 
   constructor(private http: HttpClient) {}
 
-  obterPosts(): Promise<Post[]> {
-    const options = {
-      headers: {
-        'Cache-Control': 'no-cache',
-      }
-    }; // Caso você precise de headers ou outros parâmetros
-
-    const timestamp = new Date().getTime();
-    return firstValueFrom(this.http.get<Post[]>(`${this.url}/posts?_=${timestamp}`, options));
+  obterPosts(): Observable<Post[]> {
+    return this.http.get<Post[]>(`${this.url}/posts`, options);
   }
 }
