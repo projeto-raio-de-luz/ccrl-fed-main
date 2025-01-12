@@ -5,6 +5,7 @@ import { Observable } from 'rxjs';
 @Injectable()
 export class Interceptor implements HttpInterceptor {
   intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
+    console.log("Interceptor: " + request)
     request = request.clone({
       setHeaders: {
         'Cache-Control': 'no-store, no-cache, max-age=0',
