@@ -4,13 +4,6 @@ import { firstValueFrom, Observable } from 'rxjs';
 import { environment } from '../../environments/environment';
 import { Post } from '../core/models/post';
 
-const options = {
-  headers: new HttpHeaders({
-    'Cache-Control': 'no-store, no-cache, max-age=0',
-    Pragma: 'no-cache',
-  }),
-};
-
 @Injectable({
   providedIn: 'root',
 })
@@ -21,6 +14,6 @@ export class PostService {
   constructor(private http: HttpClient) {}
 
   obterPosts(): Observable<Post[]> {
-    return this.http.get<Post[]>(`${this.url}/posts`, options);
+    return this.http.get<Post[]>(`${this.url}/posts`);
   }
 }

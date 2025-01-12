@@ -7,7 +7,7 @@ export class Interceptor implements HttpInterceptor {
   intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
     request = request.clone({
       setHeaders: {
-        'Cache-Control': 'no-cache',
+        'Cache-Control': 'no-store, no-cache, max-age=0',
         Pragma: 'no-cache',
       },
     });
